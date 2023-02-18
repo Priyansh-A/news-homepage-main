@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=Inter:wght@400;800&family=Montserrat:wght@500&family=Outfit:wght@300&display=swap');
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    max-width: 1440px;
+    min-height: 100vh;
+    position: relative;
+    margin: 5rem auto;
+}
+.unseen , .cant-see{
+    display: none;
+}
+nav{
+display: flex;
+align-items: baseline;
+justify-content: right;
+
+}
+
+svg{
+    position: absolute;
+    left:0;
+}
+li{
+    list-style: none;
+    display: inline;
+    padding: 1em;
+    width: 70%;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+
+main{
+margin-top: 2rem;
+display: grid;
+grid-template-columns: repeat(3 , 1fr);
+grid-template-rows: repeat(3 , 1fr);
+gap : 1rem;
+
+}
+
+.first-box{
+    content: url(assets/images/image-web-3-desktop.jpg);
+    height: 300px;
+    width: 100%;
+    grid-column: span 2;
+    
+}
+
+.second-box{
+    font-size: 3em;
+    font-weight: 800;
+    grid-column: 1;
+}
+
+.third-box{
+    color: hsl(240, 100%, 5%);
+}
+.btn{
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 500;
+    margin-top: 4em;
+    width: 12em;
+    height: 3.5em;
+    background-color:hsl(5, 85%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: .2em;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color: black;
+}
+
+
+.fourth-box{
+    background-color: black;
+    color: white;
+    padding: 2em; 
+    height: 80%;
+    grid-column: 3 ;
+    grid-row: 1 / 3;
+}
+.title{
+    color: hsl(35, 77%, 62%);
+}
+
+h2{
+    padding-top: 2em;
+    font-weight: 600;
+    font-size: large;
+}
+p{
+    margin-top: 1em;
+    color: hsl(233, 8%, 79%);
+}
+
+.line{
+    margin-top: 1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.426);
+}
+
+
+img{
+    width: 8em;
+    height: 8em;
+}
+.text{
+    display: flex; 
+    flex-direction: column;
+}
+.no{
+    font-size: 2em;
+    margin-top: -.25em;
+    font-weight: bold;
+    color: hsl(233, 8%, 79%);
+}
+
+.last-row{
+    margin-top: -2rem; 
+    display: flex;
+}
+
+@media  only screen and (max-width: 1000px) {
+body{
+    font-size: 12px;
+}
+
+.text h3{
+    margin-top: -.25em;
+    font-size: 90%;
+}
+.text p{
+    margin-top:-.25em;
+}
+
+}
+
+@media only screen and (max-width: 600px){
+body{
+    margin: 5rem 2rem;
+}
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+.btn{
+    margin-top: 1rem;
+}
+    p{
+        font-size: 1rem;
+    }
+    .first-box{
+        content:url(assets/images/image-web-3-mobile.jpg)
+    }
+
+    svg{
+        margin-top: -2rem; 
+
+    }
+    .last-row{
+        margin-top: 2rem;
+    }
+    
+    .last-row h3{
+        margin-top: .5rem;
+        font-size: medium;
+    }
+
+    .last-row p {
+        margin-top: .5rem;
+    }
+    .open{
+        right:0;
+        position: fixed;
+        top:0;
+        bottom:0;
+        width:65vw;
+        background-color: white;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5rem;
+        transition:all 0.5s ease-out;
+
+    }
+    .burger{
+        position: absolute;
+        cursor: pointer;
+        margin-top: -2rem;
+    }
+    .line{
+        width: 2rem;
+        background-color: black;
+        height: .25rem;
+        margin:  .25rem;
+    }
+    .menu{
+        opacity: 0;
+    }
+    ul li:hover{
+        font-weight: bolder;
+    }
+.cant-see{
+    display: block;
+    position: absolute;
+    opacity: 0;
+}
+
+.burger-close{
+    z-index: 100;
+    cursor: pointer;
+    opacity: 1;
+    right: 5%;
+}
+}
